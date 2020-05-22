@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+ <title>MD5-Crypt Password Hash</title>
+ <meta name="robots" content="noarchive,nofollow" />
+ <script src="http://dmr.ath.cx/misc/pwd/pwd.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <h1>MD5-Crypt Password Hash</h1>
+
+  <table border="0">
+    <tr>
+     <td align="right">Password:</td>
+     <td><input type="password" id="pw" onkeyup="validate_pwd()" /></td>
+    </tr>
+    <tr>
+     <td align="right">(again:)</td>
+     <td><input type="password" id="pw2" onkeyup="validate_pwd()" /></td>
+    </tr>
+    <tr>
+     <td align="right">MD5 Salt:</td>
+     <td><input type="text" size="8" maxlength="8" id="md5salt" /></td>
+    </tr>
+    <tr>
+      <td align="right"><input id="btnmd5" type="button" value="Calculate"
+          disabled="disabled" onclick="calc_md5()" /></td>
+      <td align="left"><input type="button" value="Randomize Salt"
+          onclick="randomize_md5_salt()" /></td>
+    </tr>
+    <tr>
+     <td align="right">MD5 Crypt:</td>
+     <td><span class="hash"
+               id="md5hash">$1$--------$----------------------</span>
+     </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
